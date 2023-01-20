@@ -23,6 +23,7 @@ bot.start(async (ctx) => {
     // Create a conversation for the user
     await create(ctx.from.id);
   } catch (e) {
+    console.error(e);
     return ctx.reply('❌ Please check ChatGPT token.');
   }
 

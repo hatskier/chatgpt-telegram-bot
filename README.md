@@ -1,6 +1,6 @@
 # ChatGPT-Telegram-Bot
 
-![img](./docs/images/screenshot.png ) <!-- alt = img -thumbnail -->
+![img](./docs/images/screenshot.png) <!-- alt = img -thumbnail -->
 
 [[中文简体](./docs/README-cn.md)]
 
@@ -33,7 +33,7 @@ If you wish to reset thread, you can use `/start` command.
 1. Copy the `.env` file to `.env.prod`,
 
    1. Add Telegram bot token to `TELEGRAM_BOT_TOKEN` ([How to create a Telegram bot](https://learn.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-telegram)）
-   2. Add ChatGPT token to `CHATGPT_TOKEN` ([How to get ChatGPT token](https://github.com/transitive-bullshit/chatgpt-api#session-tokens))
+   2. Add ChatGPT token to `OPENAI_SECRET_KEY` ([How to get ChatGPT token](https://github.com/transitive-bullshit/chatgpt-api#session-tokens))
 
 2. Execute the command
 
@@ -57,7 +57,7 @@ pnpm run run:pm2
 docker pull dawangraoming/chatgpt-telegram-bot:latest
 
 # Run
-docker run -d --name chatgpt-telegram-bot -e TELEGRAM_BOT_TOKEN=xxx -e CHATGPT_TOKEN=xxxx chatgpt-telegram-bot
+docker run -d --name chatgpt-telegram-bot -e TELEGRAM_BOT_TOKEN=xxx -e OPENAI_SECRET_KEY=xxxx chatgpt-telegram-bot
 ```
 
 ## Todo
