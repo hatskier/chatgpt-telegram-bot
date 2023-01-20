@@ -15,9 +15,9 @@ bot.start(async (ctx) => {
   console.log('start', ctx.from);
 
   // Create a keyboard
-  const keyboard = Markup.keyboard([
-    [Markup.button.callback(UNLOCK_THOUGHT_CONTROL, UNLOCK_THOUGHT_CONTROL)],
-  ]);
+  // const keyboard = Markup.keyboard([
+  //   [Markup.button.callback(UNLOCK_THOUGHT_CONTROL, UNLOCK_THOUGHT_CONTROL)],
+  // ]);
 
   try {
     // Create a conversation for the user
@@ -28,7 +28,10 @@ bot.start(async (ctx) => {
   }
 
   // Reply to the user with a greeting and the keyboard
-  return ctx.reply(`Hello ${ctx.from?.first_name}! Let's chat`, keyboard);
+  // return ctx.reply(`Hello ${ctx.from?.first_name}! Let's chat`, keyboard);
+  return ctx.reply(
+    `Hello ${ctx.from?.first_name}! Let's chat. You can chat in any language you want. Please note, I am a beta version so I don't remember your previous messages`,
+  );
 });
 
 // When the bot receives a text message
