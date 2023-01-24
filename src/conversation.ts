@@ -54,7 +54,7 @@ export const send = async (
   // });
 };
 
-async function sendMessageToChatGPT(msg: string) {
+export async function sendMessageToChatGPT(msg: string) {
   const response = await openai.createCompletion({
     model: 'text-davinci-003',
     prompt: `The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.

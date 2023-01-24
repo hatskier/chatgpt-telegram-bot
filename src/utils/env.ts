@@ -7,6 +7,7 @@ const envSchema = z.object({
   TELEGRAM_BOT_TOKEN: z.string().min(5),
   OPENAI_SECRET_KEY: z.string().min(5),
   OPENAI_ORG_ID: z.string().min(5),
+  MONGO_DB_URL: z.string().min(5),
 });
 
 export const env = envSchema.parse(process.env);
